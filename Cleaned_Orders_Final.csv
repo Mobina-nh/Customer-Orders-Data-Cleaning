@@ -1,0 +1,62 @@
+﻿Order_ID,Order_Date,Customer,City,Product,Quantity,Unit_Price_EGP,Status
+ORD-0001,2026-10-03,Ahmed Samy,Cairo,USB Cable,3.0,95.0,Cancelled
+ORD-0002,2026-10-12,Mona Adel,Alexandria,Keyboard,1.0,550.0,Completed
+ORD-0003,2026-10-16,Ahmed Samy,Cairo,Keyboard,3.0,550.0,Pending
+ORD-0004,2026-11-16,Hana Mostafa,Giza,Headset,1.0,890.0,Pending
+ORD-0005,2026-10-30,Salma Fathy,,Keyboard,2.0,550.0,Completed
+ORD-0006,2026-10-16,Farah Tarek,Cairo,Headset,2.0,890.0,Cancelled
+ORD-0007,,Salma Fathy,Tanta,Mouse,2.0,260.0,Cancelled
+ORD-0008,2026-11-13,Ahmed Samy,Giza,Monitor,4.0,4200.0,Cancelled
+ORD-0009,2026-10-26,Omar Hassan,Giza,USB Cable,2.0,95.0,Completed
+ORD-0010,2026-10-20,Youssef Kamal,Giza,USB Cable,2.0,95.0,Completed
+ORD-0011,2026-10-25,Youssef Kamal,Giza,Headset,,890.0,Pending
+ORD-0012,2026-11-09,Mahmoud Saeed,Aswan,Headset,3.0,890.0,Pending
+ORD-0013,2026-10-16,Yara Hossam,Alexandria,Monitor,1.0,4200.0,Completed
+ORD-0014,2026-10-25,Ahmed Samy,Mansoura,USB Cable,4.0,95.0,Completed
+ORD-0015,2026-10-11,Mona Adel,Alexandria,Headset,3.0,890.0,Pending
+ORD-0016,2026-11-16,Yara Hossam,Alexandria,Mouse,2.0,,Pending
+ORD-0017,2026-10-01,Mahmoud Saeed,Giza,USB Cable,2.0,95.0,Completed
+ORD-0018,2026-11-03,Ahmed Samy,Tanta,Monitor,3.0,4200.0,Cancelled
+ORD-0019,2026-10-18,Mahmoud Saeed,Aswan,Monitor,3.0,4200.0,Pending
+ORD-0020,2026-11-10,Farah Tarek,Giza,USB Cable,2.0,95.0,Cancelled
+ORD-0021,,Laila Mahmoud,Giza,Headset,2.0,890.0,Cancelled
+ORD-0022,2026-11-15,Youssef Kamal,Alexandria,Monitor,3.0,4200.0,Pending
+ORD-0023,2026-10-17,Karim Nabil,Aswan,Mouse,1.0,260.0,Cancelled
+ORD-0024,2026-10-20,Mahmoud Saeed,Giza,Headset,1.0,890.0,Pending
+ORD-0025,2026-11-09,Hana Mostafa,Mansoura,Monitor,,4200.0,Pending
+ORD-0026,2026-10-24,Hana Mostafa,Aswan,Monitor,1.0,4200.0,Completed
+ORD-0027,2026-11-11,Mahmoud Saeed,Cairo,Mouse,1.0,260.0,Completed
+ORD-0028,,Salma Fathy,Cairo,Mouse,1.0,260.0,Pending
+ORD-0029,2026-11-08,Mona Adel,Cairo,Mouse,1.0,260.0,Pending
+ORD-0030,2026-10-30,Omar Hassan,Tanta,Headset,1.0,890.0,Processing?
+ORD-0031,2026-10-25,Yara Hossam,Mansoura,USB Cable,4.0,95.0,Completed
+ORD-0032,2026-11-04,Ahmed Samy,Giza,Headset,1.0,890.0,Pending
+ORD-0033,2026-11-04,Mahmoud Saeed,Aswan,Keyboard,1.0,550.0,Pending
+ORD-0034,2026-10-22,Mahmoud Saeed,Aswan,Headset,4.0,890.0,Cancelled
+ORD-0035,,Farah Tarek,Mansoura,Monitor,1.0,4200.0,Completed
+ORD-0036,2026-10-13,Nour Ali,Mansoura,Keyboard,3.0,550.0,Completed
+ORD-0037,2026-10-30,,Mansoura,Monitor,2.0,4200.0,Cancelled
+ORD-0038,2026-11-05,Karim Nabil,Alexandria,Monitor,2.0,4200.0,Completed
+ORD-0039,2026-11-15,Salma Fathy,Mansoura,Monitor,4.0,4200.0,Cancelled
+ORD-0040,2026-10-21,Nour Ali,Mansoura,USB Cable,1.0,95.0,Pending
+ORD-0041,2026-10-29,Farah Tarek,Aswan,Keyboard,2.0,550.0,Completed
+ORD-0042,,Mahmoud Saeed,Mansoura,Mouse,1.0,260.0,Pending
+ORD-0043,2026-10-16,Ahmed Samy,Aswan,Mouse,2.0,260.0,Completed
+ORD-0044,2026-11-02,Omar Hassan,Tanta,Headset,2.0,890.0,Completed
+ORD-0045,2026-10-25,Hana Mostafa,Giza,Headset,4.0,0.0,Cancelled
+ORD-0046,2026-10-24,Mahmoud Saeed,Aswan,Keyboard,2.0,550.0,Cancelled
+ORD-0047,2026-10-18,Mahmoud Saeed,Aswan,Keyboard,1.0,550.0,Pending
+ORD-0048,2026-11-17,Hana Mostafa,Mansoura,Mouse,3.0,260.0,Cancelled
+ORD-0049,2026-10-29,Omar Hassan,Alexandria,USB Cable,2.0,95.0,Pending
+ORD-0050,2026-10-07,Omar Hassan,Giza,USB Cable,,95.0,Cancelled
+ORD-0051,2026-11-03,Hana Mostafa,Mansoura,Mouse,2.0,260.0,Cancelled
+ORD-0052,2026-10-07,Laila Mahmoud,Alexandria,USB Cable,4.0,95.0,Cancelled
+ORD-0053,2026-10-22,Karim Nabil,Tanta,Monitor,2.0,4200.0,Completed
+ORD-0054,2026-10-22,Ahmed Samy,Mansoura,Monitor,1.0,4200.0,Completed
+ORD-0055,2026-10-31,Nour Ali,Giza,Headset,4.0,890.0,Pending
+ORD-0056,,Mona Adel,Aswan,Headset,4.0,890.0,Completed
+ORD-0057,2026-10-24,Yara Hossam,Tanta,Headset,4.0,890.0,Completed
+ORD-0058,2026-10-07,Omar Hassan,Tanta,Monitor,4.0,4200.0,Pending
+ORD-0059,2026-11-13,Salma Fathy,Giza,USB Cable,4.0,95.0,Completed
+ORD-0060,2026-10-20,Omar Hassan,Giza,Mouse,2.0,260.0,Completed
+ORD-0019,2026-10-18,Mahmoud Saeed,Aswan,Monitor,3.0,590.0,Pending

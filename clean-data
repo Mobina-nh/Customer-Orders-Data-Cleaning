@@ -1,0 +1,281 @@
+import pandas as pd
+
+
+#Read the original dataset
+df=pd.read_csv(r"C:\Users\HAMTA\OneDrive\Desktop\New folder\01M7QRDRNZHP3D42H7R04ZQ52T.csv")
+
+#display first 5 rows
+print("First 5 rows:")
+print(df.head())
+
+#dataset information
+print("\nDataset Information:")
+print(df.info())
+
+#number of rows and columns
+print("\nDataset Shape:")
+print(df.shape)
+
+#missing values
+print("\nDataset Values:")
+print(df.isnull().sum())
+
+#duplicate rows
+print("\nDataset Rows:")
+print(df.duplicated().sum())
+
+#display all rows 
+pd.set_option("display.max_rows",None)
+pd.set_option("display.max_columns",None)
+
+print(df.to_string())
+
+#create a copy of the original dataset
+clean_df=df.copy()
+
+#remove extra spaces and standardize text
+text_columens=["Customer","City","Product","Status"]
+
+for col in text_columens:
+    clean_df[col]=clean_df[col].str.strip().str.title()
+
+#standardize order ids
+clean_df["Order_ID"]=clean_df["Order_ID"].str.strip().str.upper()
+
+#display the cleaned data
+print("\nAfter Standardizing Text:")
+print(clean_df[["Order_ID","Customer","City","Product","Status"]].head(15))
+
+#standardize product names
+product_names={
+    "Usb Cable": "USB Cable",
+    "Keyboard": "Keyboard",
+    "Headset": "Headset",
+    "Monitor": "Monitor",
+    "Mouse": "Mouse"
+}
+
+clean_df["Product"]=clean_df["Product"].replace(product_names)
+
+
+# Clean price values
+clean_df["Unit_Price_EGP"] = (
+    df["Unit_Price_EGP"]
+    .astype("string")
+    .str.replace(r"[^0-9.]", "", regex=True)
+)
+price = df["Unit_Price_EGP"].astype("string").str.strip()
+
+price = price.str.replace("EGP", "", regex=False).str.strip()
+
+
+# Convert price to numeric values
+clean_df["Unit_Price_EGP"] = pd.to_numeric(
+    clean_df["Unit_Price_EGP"],
+    errors="coerce"
+)
+price = price.replace("", pd.NA)
+
+# Display results
+print("\nCleaned Prices:")
+print(clean_df[["Order_ID", "Unit_Price_EGP"]].to_string(index=False))
+
+print("\nPrice Data Type:")
+print(clean_df["Unit_Price_EGP"].dtype)
+
+# Clean Quantity column
+
+clean_df["Quantity"] = pd.to_numeric(
+    df["Quantity"],
+    errors="coerce"
+)
+
+# Display results
+print("\nCleaned Quantity:")
+print(clean_df[["Order_ID", "Quantity"]].to_string(index=False))
+
+print("\nQuantity Data Type:")
+print(clean_df["Quantity"].dtype)
+
+# Find invalid quantities
+invalid_quantity = clean_df[
+    clean_df["Quantity"] <= 0
+]
+
+print("\nInvalid Quantities:")
+print(
+    invalid_quantity[["Order_ID", "Quantity"]].to_string(index=False)
+)
+
+# Replace negative quantities with missing values
+clean_df.loc[
+    clean_df["Quantity"] < 0,
+    "Quantity"
+] = pd.NA
+
+print("\nQuantity After Cleaning:")
+print(clean_df[["Order_ID", "Quantity"]].to_string(index=False))
+
+# Replace negative quantities with missing values
+clean_df.loc[
+    clean_df["Quantity"] < 0,
+    "Quantity"
+] = pd.NA
+
+print("\nQuantity After Cleaning:")
+print(clean_df[["Order_ID", "Quantity"]].to_string(index=False))
+
+#check order_date column
+
+print("\nOrginal Order Dates:")
+print(clean_df[["Order_ID", "Order_Date"]].to_string(index=False))
+
+print("\nOrder_Date Data Type:")
+print(clean_df["Order_ID"].dtype)
+
+#convert standard date (YYY-MM-DD)
+clean_df["Order_Date"]=pd.to_datetime(
+    df["Order_Date"],
+    format="%Y-%m-%d",
+    errors="coerce"
+)
+print("\nConverted Oreder Dates:")
+print(clean_df[["Order_ID", "Order_Date"]].to_string(index=False))
+
+#find dates converting
+slash_date=df[
+    df["Order_Date"].astype("string").str.contains("/",na=False)
+]
+print("\nDates with slash format:")
+print(slash_date[["Order_ID","Order_Date"]].to_string(index=False))
+
+#conver confirmed date
+confirmed_date={
+    "ORD-0014":"25/10/2026",
+    "ORD-0049":"29/10/2026"
+}
+for order_id ,date_value in confirmed_date.items():
+   clean_df.loc[
+     clean_df["Order_ID"]==order_id,
+     "Order_Date"
+   ]=pd.to_datetime(
+     date_value,format="%d/%m/%Y"
+   )
+print(clean_df[["Order_ID", "Order_Date"]].to_string(index=False))
+
+#find missing or invalid data
+invalid_data=clean_df[
+    clean_df["Order_Date"].isna()
+]
+print("\nMissing or Invalid Dates:")
+print(invalid_data[["Order_ID", "Order_Date"]].to_string(index=False))
+print("\nTotal Missing or Invalid Dates:")
+print(len(invalid_data))
+
+#check unique order statuses
+print("\nUNiaue Order Statuses:")
+print(clean_df["Status"].unique())
+print("\nStatus Counts:")
+print(clean_df["Status"].value_counts(dropna=False))
+
+#find suspicious order statuses
+suspicious_status= clean_df[
+    clean_df["Status"]=="Processing?"
+]
+print("\nsuspicious Status:")
+print(suspicious_status[["Order_ID","Customer","Product","Status"]].to_string(index=False))
+
+#find duplicate rows
+
+duplicate=clean_df[
+    clean_df.duplicated(keep=False)
+]
+
+print("\nDuolicate Rows:")
+print(duplicate.to_string(index=False))
+print("\nTotal Duplicate Rows:")
+print(len(duplicate))
+
+#Remove Duolicate Rows
+clean_df=clean_df.drop_duplicates()
+
+print("\nDataset Shape After Removing Duplicates:")
+print(clean_df.shape)
+print("\nRemoving Duplicate Rows:")
+print(clean_df.duplicated().sum())
+
+#find duplicate Order IDs
+duplicate_ids=clean_df[clean_df.duplicated(subset=["Order_ID"],keep=False)]
+print("\nDuplicate Order IDs:")
+print(duplicate_ids[["Order_ID","Order_Date","Product","Unit_Price_EGP"]].to_string(index=False))
+
+#check missing value after cleaning
+print("\nMissing VAlue After Cleaning:")
+print(clean_df.isnull().sum())
+print("\nFinal Dataset Shape:")
+print(clean_df.shape)
+
+
+
+# Create Review / Issues report
+
+issues = [
+    ["ORD-0007", "Ambiguous Date", "02/11/2026", "Needs confirmation"],
+    ["ORD-0014", "Date Format", "25/10/2026", "Converted to YYYY-MM-DD"],
+    ["ORD-0021", "Invalid Date", "31/02/2026", "Converted to missing value"],
+    ["ORD-0028", "Ambiguous Date", "10/11/2026", "Needs confirmation"],
+    ["ORD-0035", "Ambiguous Date", "05/10/2026", "Needs confirmation"],
+    ["ORD-0042", "Ambiguous Date", "12/11/2026", "Needs confirmation"],
+    ["ORD-0049", "Date Format", "29/10/2026", "Converted to YYYY-MM-DD"],
+    ["ORD-0056", "Missing Date", "Empty", "Needs review"],
+    ["ORD-0005", "Missing City", "Empty", "Needs review"],
+    ["ORD-0037", "Missing Customer", "Empty", "Needs review"],
+    ["ORD-0011", "Missing Quantity", "Empty", "Needs review"],
+    ["ORD-0050", "Invalid Quantity", "two", "Converted to missing value"],
+    ["ORD-0025", "Negative Quantity", "-2", "Converted to missing value"],
+    ["ORD-0016", "Invalid Price", "not recorded", "Converted to missing value"],
+    ["ORD-0030", "Suspicious Status", "Processing?", "Needs confirmation"],
+    ["ORD-0008", "Duplicate Row", "Exact duplicate", "One duplicate row removed"],
+    ["ORD-0019", "Conflicting Order ID", "Prices: 4200 and 590", "Needs investigation"]
+]
+
+# Create DataFrame and remove duplicate issues
+review_df = pd.DataFrame(
+    issues,
+    columns=["Order_ID", "Issue_Type", "Original_Value", "Action_Taken"]
+).drop_duplicates()
+
+# Display final report
+print("\nFinal Review / Issues:")
+print(review_df.to_string(index=False))
+
+print("\nTotal Issues:", len(review_df))
+
+
+
+# Export final cleaned files
+
+with pd.ExcelWriter("Cleaned_Orders_Final.xlsx", engine="openpyxl") as writer:
+
+    clean_df.to_excel(
+        writer,
+        sheet_name="Cleaned Orders",
+        index=False
+    )
+
+    review_df.to_excel(
+        writer,
+        sheet_name="Review - Issues",
+        index=False
+    )
+
+# Save CSV file
+clean_df.to_csv(
+    "Cleaned_Orders_Final.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+print("\nFiles Created Successfully!")
+print("Excel: Cleaned_Orders_Final.xlsx")
+print("CSV: Cleaned_Orders_Final.csv")

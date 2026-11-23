@@ -1,0 +1,63 @@
+﻿Order_ID,Order_Date,Customer,City,Product,Quantity,Unit_Price_EGP,Status
+ORD-0001,2026-10-03,Ahmed Samy,Cairo,USB Cable,3,95,Cancelled
+ORD-0002,2026-10-12,Mona Adel,Alexandria,Keyboard,1,550,Completed
+ORD-0003,2026-10-16,Ahmed Samy,Cairo,Keyboard,3,550,Pending
+ORD-0004,2026-11-16,Hana Mostafa,Giza,Headset,1,890,Pending
+ORD-0005,2026-10-30,Salma Fathy,,Keyboard,2,550,Completed
+ORD-0006,2026-10-16,Farah Tarek,Cairo,Headset,2,890,Cancelled
+ORD-0007,02/11/2026,Salma Fathy,Tanta,Mouse,2,260,Cancelled
+ORD-0008,2026-11-13,Ahmed Samy,giza ,Monitor,4,4200,Cancelled
+ORD-0009,2026-10-26,  OMAR HASSAN  ,Giza,USB Cable,2,95,Completed
+ORD-0010,2026-10-20,Youssef Kamal,Giza,USB Cable,2,EGP 95,Completed
+ORD-0011,2026-10-25,Youssef Kamal,Giza,Headset,,890,pending 
+ORD-0012,2026-11-09,Mahmoud Saeed,Aswan,Headset,3,890,Pending
+ORD-0013,2026-10-16,Yara Hossam,Alexandria,monitor,1,4200,Completed
+ORD-0014,25/10/2026,Ahmed Samy,Mansoura,USB Cable,4,95,Completed
+ORD-0015,2026-10-11,Mona Adel,Alexandria,Headset,3,890,Pending
+ORD-0016,2026-11-16,Yara Hossam,alexandria ,Mouse,2,not recorded,Pending
+ORD-0017,2026-10-01,Mahmoud Saeed,Giza,USB Cable,2,95,Completed
+ORD-0018,2026-11-03,  AHMED SAMY  ,Tanta,Monitor,3,4200,Cancelled
+ORD-0019,2026-10-18,Mahmoud Saeed,Aswan,Monitor,3,4200,Pending
+ORD-0020,2026-11-10,Farah Tarek,Giza,USB Cable,2,EGP 95,Cancelled
+ORD-0021,31/02/2026,Laila Mahmoud,Giza,Headset,2,890,Cancelled
+ORD-0022,2026-11-15,Youssef Kamal,Alexandria,Monitor,3,4200,pending 
+ORD-0023,2026-10-17,Karim Nabil,Aswan,Mouse,1,260,Cancelled
+ORD-0024,2026-10-20,Mahmoud Saeed,giza ,Headset,1,890,Pending
+ORD-0025,2026-11-09,Hana Mostafa,Mansoura,Monitor,-2,4200,Pending
+ORD-0026,2026-10-24,Hana Mostafa,Aswan,monitor,1,4200,Completed
+ORD-0027,2026-11-11,  MAHMOUD SAEED  ,Cairo,Mouse,1,260,Completed
+ORD-0028,10/11/2026,Salma Fathy,Cairo,Mouse,1,260,Pending
+ORD-0029,2026-11-08,Mona Adel,Cairo,Mouse,1,260,Pending
+ORD-0030,2026-10-30,Omar Hassan,Tanta,Headset,1,EGP 890,processing?
+ORD-0031,2026-10-25,Yara Hossam,Mansoura,USB Cable,4,95,Completed
+ORD-0032,2026-11-04,Ahmed Samy,giza ,Headset,1,890,Pending
+ORD-0033,2026-11-04,Mahmoud Saeed,Aswan,Keyboard,1,550,pending 
+ORD-0034,2026-10-22,Mahmoud Saeed,Aswan,Headset,4,890,Cancelled
+ORD-0035,05/10/2026,Farah Tarek,Mansoura,Monitor,1,4200,Completed
+ORD-0036,2026-10-13,  NOUR ALI  ,Mansoura,Keyboard,3,550,Completed
+ORD-0037,2026-10-30,,Mansoura,Monitor,2,4200,Cancelled
+ORD-0038,2026-11-05,Karim Nabil,Alexandria,Monitor,2,4200,Completed
+ORD-0039,2026-11-15,Salma Fathy,Mansoura,monitor,4,4200,Cancelled
+ORD-0040,2026-10-21,Nour Ali,mansoura ,USB Cable,1,EGP 95,Pending
+ORD-0041,2026-10-29,Farah Tarek,Aswan,Keyboard,2,550,Completed
+ORD-0042,12/11/2026,Mahmoud Saeed,Mansoura,Mouse,1,260,Pending
+ORD-0043,2026-10-16,Ahmed Samy,Aswan,Mouse,2,260,Completed
+ORD-0044,2026-11-02,Omar Hassan,Tanta,Headset,2,890,completed 
+ORD-0045,2026-10-25,  HANA MOSTAFA  ,Giza,Headset,4,0,Cancelled
+ORD-0046,2026-10-24,Mahmoud Saeed,Aswan,Keyboard,2,550,Cancelled
+ORD-0047,2026-10-18,Mahmoud Saeed,Aswan,Keyboard,1,550,Pending
+ORD-0048,2026-11-17,Hana Mostafa,mansoura ,Mouse,3,260,Cancelled
+ORD-0049,29/10/2026,Omar Hassan,Alexandria,USB Cable,2,95,Pending
+ORD-0050,2026-10-07,Omar Hassan,Giza,USB Cable,two,EGP 95,Cancelled
+ORD-0051,2026-11-03,Hana Mostafa,Mansoura,Mouse,2,260,Cancelled
+ORD-0052,2026-10-07,Laila Mahmoud,Alexandria,usb cable,4,95,Cancelled
+ORD-0053,2026-10-22,Karim Nabil,Tanta,Monitor,2,4200,Completed
+ORD-0054,2026-10-22,  AHMED SAMY  ,Mansoura,Monitor,1,4200,Completed
+ORD-0055,2026-10-31,Nour Ali,Giza,Headset,4,890,pending 
+ORD-0056,,Mona Adel,aswan ,Headset,4,890,Completed
+ORD-0057,2026-10-24,Yara Hossam,Tanta,Headset,4,890,Completed
+ORD-0058,2026-10-07,Omar Hassan,Tanta,Monitor,4,4200,Pending
+ORD-0059,2026-11-13,Salma Fathy,Giza,USB Cable,4,95,Completed
+ORD-0060,2026-10-20,Omar Hassan,Giza,Mouse,2,EGP 260,Completed
+ORD-0008,2026-11-13,Ahmed Samy,giza ,Monitor,4,4200,Cancelled
+ORD-0019,2026-10-18,Mahmoud Saeed,Aswan,Monitor,3,EGP 590,Pending
